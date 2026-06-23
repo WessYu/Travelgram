@@ -1,34 +1,44 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --brand-color: #EF5F4C;
     --shape-transparency: #ffffff8f;
-    --background-color:#FFFFFF;
-    --surface-color:#F5F5F5;
-    --skeleton-color:#D9D9D9;
-    --text-color-primary:#313131;
-    --text-color-secundary:#6C6C6C;
+    --background-color: #FFFFFF;
+    --surface-color: #F5F5F5;
+    --skeleton-color: #D9D9D9;
+    --text-color-primary: #313131;
+    --text-color-secundary: #6C6C6C;
 
-    --font-family: "Poppins", serif;
-    --text-lg: bold 32px/125% var(--font-family);
-    --text:16px/150% var(--font-family);
+    --font-family: "Poppins", sans-serif;
+    --text-lg: 700 32px/125% var(--font-family);
+    --text: 16px/150% var(--font-family);
     --text-md: 14px/175% var(--font-family);
     --text-sm: 12px/175% var(--font-family);
 }
 
-body{
-    font: var(--font-family);
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: var(--text);
     color: var(--text-color-secundary);
     background-color: var(--background-color);
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    transition: color 160ms ease;
 }
 
 a:hover {
@@ -42,6 +52,12 @@ a:hover {
     margin-inline: auto;
 }
 
-.bg-surface-color{
+.bg-surface-color {
     background-color: var(--surface-color);
+}
+
+@media (max-width: 720px) {
+    .container {
+        padding-inline: 20px;
+    }
 }
