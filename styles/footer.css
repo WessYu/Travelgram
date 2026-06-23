@@ -1,0 +1,23 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-block: 24px;
+    font: var(--text-md);
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+@media (max-width: 560px) {
+    footer,
+    footer div {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
