@@ -1,0 +1,45 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding-block: 24px;
+}
+
+main figure {
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: var(--skeleton-color);
+    aspect-ratio: 1 / 1;
+}
+
+main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 220ms ease, filter 220ms ease;
+}
+
+main figure:hover img {
+    transform: scale(1.04);
+    filter: saturate(1.08);
+}
+
+@media (max-width: 960px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+}
+
+@media (max-width: 680px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+@media (max-width: 420px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
